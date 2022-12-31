@@ -6,25 +6,12 @@ import java.sql.*;
 // 데이터베이스의 데이터에 접근하기 위해 생성하는 객체
 // DB를 사용하여 데이터의 조회 및 조작하는 기능을 전담하는 오브젝트
 public class UserDao {
-
-    public Connection getConnection() {
-        String url = "jdbc:h2:mem://localhost/~/jdbc-practice;MODE=MySQL;DB_CLOSE_DELAY=-1";
-        String id = "sa";
-        String pw = "";
-
-        try {
-            Class.forName("org.h2.Driver");
-            return DriverManager.getConnection(url, id, pw);
-        } catch (Exception ex) {
-            return null;
-        }
-    }
     public void create(User user) throws SQLException {
         Connection con = null;
         PreparedStatement preparedStatement = null;
 
         try {
-            con = getConnection();
+            con = ConnectionManager.getConnection();
             String sql = "INSERT INTO USERS VALUES (?, ?, ?, ?)";
 
             preparedStatement = con.prepareStatement(sql);
@@ -50,7 +37,7 @@ public class UserDao {
         ResultSet rs = null;
 
         try {
-            con = getConnection();
+            con = ConnectionManager.getConnection();
             String sql = "SELECT userId, password, name, email FROM USERS WHERE userId=?";
             preparedStatement = con.prepareStatement(sql);
             preparedStatement.setString(1, userId);
