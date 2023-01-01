@@ -5,8 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7891ea79-26a0-4c9d-b193-6543181b287f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/JdbcTemplate.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/PreparedStatementSetter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/RowMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/ConnectionManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/ConnectionManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/UserDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/UserDao.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -43,6 +45,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
